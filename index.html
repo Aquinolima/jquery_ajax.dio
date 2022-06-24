@@ -5,44 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jquery e Ajax</title>
+    <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-    <nav>
-      <h1>Consulta CEP</h1>
-      <div>
-        <input type="search" placeholder="CEP" id="cep" />
-        <button onclick="consultaCep()">Buscar</button>
+    <div class="container">
+      <div class="form">
+        <div>
+          <h1>Consulta CEP</h1>
+        </div>
+        <div class="in">
+          <div>
+            <input type="search" placeholder="CEP" id="cep" />
+          </div>
+          <div>
+            <button onclick="consultaCep()">Buscar</button>
+          </div>
+        </div>
       </div>
-    </nav>
-    <div id="resultado" hidden>
-      <h3>Resultado da Consulta</h3>
-      <div>
-        <table>
-          <tbody>
-            <tr>
-              <td>Cep</td>
-              <td id="num_cep"></td>
-            </tr>
-            <tr>
-              <td>Logradouro</td>
-              <td id="logradouro"></td>
-            </tr>
-            <tr>
-              <td>Bairro</td>
-              <td id="bairro"></td>
-            </tr>
-            <tr>
-              <td>Localidade</td>
-              <td id="localidade"></td>
-            </tr>
-            <tr>
-              <td>UF</td>
-              <td id="uf"></td>
-            </tr>
-          </tbody>
-        </table>
+<div id="loader">
+
+	<div class="lds-ripple"><div></div><div></div></div>
+</div>
+
+      <div class="resultado">
+        <div class="res" id="resultado" hidden>
+          <div class="res_tittle">
+            <h2>Resultado da Consulta</h2>
+          </div>
+
+          <div class="infos">
+            <div class="line">
+              <b>Cep</b>
+              <p id="num_cep"></p>
+            </div>
+
+            <div class="line">
+              <b>Logradouro</b>
+              <p id="logradouro"></p>
+            </div>
+            <div class="line">
+              <b>Bairro</b>
+              <p id="bairro"></p>
+            </div>
+            <div class="line">
+              <b>Localidade</b>
+              <p id="localidade"></p>
+            </div>
+            <div class="line">
+              <b>UF</b>
+              <p id="uf"></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
